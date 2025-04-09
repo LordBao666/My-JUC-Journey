@@ -1,0 +1,9 @@
+#My Own setting
+.idea
+*.log
+*.iml
+out
+
+target
+
+

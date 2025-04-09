@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lordbao</groupId>
+    <artifactId>My-JUC-Journecy</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>01-concurrency-programming</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--   lombok    -->
+<!--            注意在使用Lombok的@SLF4j(内置logger对象) 注解时，需要导入slf4j门面-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.34</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!--   日志相关框架    -->
+            <!-- log4j2适配器
+                适配器内置了log4j2门面和log4j2实现，因此这2个不写.
+                适配器甚至集成了slf4j 门面.
+              -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j2-impl</artifactId>
+                <version>2.23.1</version>
+            </dependency>
+            <!--  异步日志依赖      -->
+            <!--  本项目用不到异步日志          -->
+<!--            <dependency>-->
+<!--                <groupId>com.lmax</groupId>-->
+<!--                <artifactId>disruptor</artifactId>-->
+<!--                <version>4.0.0</version>-->
+<!--            </dependency>-->
+
+
+
+            <!-- JUnit Jupiter API: 用于编写测试 -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.10.3</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- JUnit Jupiter Engine: 用于运行测试 -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>5.10.3</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
