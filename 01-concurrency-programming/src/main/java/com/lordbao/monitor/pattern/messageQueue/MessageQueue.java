@@ -1,4 +1,4 @@
-package com.lordbao.monitor.messageQueue;
+package com.lordbao.monitor.pattern.messageQueue;
 
 
 import java.util.LinkedList;

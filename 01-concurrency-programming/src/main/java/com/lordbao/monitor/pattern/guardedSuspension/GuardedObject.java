@@ -1,4 +1,4 @@
-package com.lordbao.monitor.guardedSuspension;
+package com.lordbao.monitor.pattern.guardedSuspension;
 
 
 /**
