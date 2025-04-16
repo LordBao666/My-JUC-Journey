@@ -13,7 +13,7 @@
 
     <Loggers>
         <!-- 此处没有用异步日志的需要       -->
-        <Root level="info">
+        <Root level="debug">
             <AppenderRef ref="consoleAppender"/>
         </Root>
     </Loggers>
