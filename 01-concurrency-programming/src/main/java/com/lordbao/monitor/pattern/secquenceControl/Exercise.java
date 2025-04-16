@@ -178,47 +178,7 @@ public class Exercise {
     }
 
 
-    //...................分割线.........................
 
-
-    private static class MyLock3{
-        private int id;//当前允许运行线程id;
-
-        public MyLock3(int id) {
-            this.id = id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public int getId() {
-            return id;
-        }
-    }
-
-    private static class MyRun3 implements Runnable {
-        private int id;//当前线程id
-        private int nextId;//下个线程运行id
-        private String message;//打印的信息
-        private int count;//打印次数
-        private final MyLock3 lock;//锁对象
-
-        public MyRun3(int id, int nextId, String message, int count, MyLock3 lock) {
-            this.id = id;
-            this.nextId = nextId;
-            this.message = message;
-            this.count = count;
-            this.lock = lock;//锁对象
-        }
-
-        @Override
-        public void run() {
-            for (int i = 0; i < count; i++) {
-                LockSupport.park();
-            }
-        }
-    }
 
 
     public static void main(String[] args) {
