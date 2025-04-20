@@ -1,8 +1,8 @@
 package com.lordbao.monitor.problem;
 
 
-import com.lordbao.monitor.utils.ReentrantLockHelper;
-import com.lordbao.monitor.utils.Sleeper;
+import com.lordbao.utils.ReentrantLockHelper;
+import com.lordbao.utils.Sleeper;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.TimeUnit;

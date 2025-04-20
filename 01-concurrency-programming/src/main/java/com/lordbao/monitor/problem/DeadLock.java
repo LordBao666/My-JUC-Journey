@@ -7,7 +7,7 @@ package com.lordbao.monitor.problem;
  * @Version 1.0
  */
 
-import com.lordbao.monitor.utils.Sleeper;
+import com.lordbao.utils.Sleeper;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j(topic = "c.deadlock")
